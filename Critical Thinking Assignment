@@ -1,0 +1,29 @@
+# Name: Stephen Aulerich
+# Course: CSC500
+# Module: 3
+
+# Part 1: Write a program that calculates the total amount of a meal purchased at a restaurant. The program should ask the user to enter the charge for the food and then calculate the amounts with an 18 percent tip and 7 percent sales tax. Display each of these amounts and the total price.
+## To show some more of my developing skills, I will use create a dictionary of all the sandwiches I purchased for the employee lunch.
+subway_Sandwiches = {'Spciy Italian': 6.50, 'Steak & Cheese': 8.50, 'Tuna': 8.50, 'Veggie Delight': 6.50, 'B.L.T.': 5.25}
+## To find the total of all the sandwiches, the sum() function must be used.
+order = sum(subway_Sandwiches.values())
+print(f'{order.2f}')
+## Finding the tax on the order.
+tax = order * 0.07
+print(f'{tax.2f}')
+## Finding the tip on the order.
+tip = (tax + tip) * 0.18
+print(f'{tip.2f}')
+## Finding the total on the order.
+total = order + tax + tip
+print(f'{total.2f}')
+
+# Part 2:  Part 2: Many people keep time using a 24-hour clock (11 is 11am and 23 is 11pm, 0 is midnight). If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm). Write a Python program to solve the general version of the above problem. Ask the user for the time now (in hours) and then ask for the number of hours to wait for the alarm. Your program should output what the time will be on a 24-hour clock when the alarm goes off.
+## First, in order to set the alarm, the user must be asked first what their current time is.
+current_Time = int(14)
+## Second, to set the alarm, the user will be asked how long they want their clock to tick.
+setting_Alarm = int(127)
+## Lastly, to know when the alarm will go off, the next line of code will calculate when the alarm will go off.
+alarm = (current_Time + setting_Time) % 24
+## Now, the user can learn when their alarm will go off at a certain time.
+print('On a 24-hour clock, if a', setting_Alarm, 'hour alarm is set at', current_Time, ': 00, it will go off at', alarm,': 00.')
